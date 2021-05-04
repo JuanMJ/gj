@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ContabilidadUIA1</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root></app-root>
+</body>
+
+<clase mat-table ="lessons-table mat-elevation-z8" [dataSource]="dataSource">
+  
+  < matColumnDef="seqNo">
+      <div *matHeaderCellDef>#</div>
+      <div *matCellDef="dejar lección">{{lesson.seqNo}}</div>
+  </contenedor de ng>
+
+  <ng-container matColumnDef="descripción">
+      <div *matHeaderCellDef>Descripción</div>
+      <clase div ="description-cell"
+                *matCellDef="dejar lección">{{lesson.description}}</div>
+  </contenedor de ng>
+
+  <ng-container matColumnDef="duración">
+      <div *matHeaderCellDef>Duración</div>
+      <clase div ="celda de duración"
+                *matCellDef="dejar lección">{{lesson.duration}}</div>
+  </contenedor de ng>
+  
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  
+</mesa mat>
+</html>
